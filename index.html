@@ -16,6 +16,17 @@
       gtag("config", "AW-17943190951");
     </script>
 
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {};
+        gtag("event", "conversion", {
+          send_to: "AW-17943190951/Z1P3CLz1t_YbEKe7_etC",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Совместное родительство</title>
@@ -256,11 +267,7 @@
             href="https://t.me/oleg_coparent"
             target="_blank"
             rel="noopener noreferrer"
-            onclick="gtag('event', 'click', {
-              'event_category': 'CTA',
-              'event_label': 'Telegram Link',
-              'value': 1
-            });"
+            onclick="return gtag_report_conversion('https://t.me/oleg_coparent');"
             >📱 Напишите мне в Telegram →</a
           >
         </h3>
